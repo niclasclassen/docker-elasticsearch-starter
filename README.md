@@ -32,8 +32,8 @@ docker cp elasticsearch:/usr/share/elasticsearch/config/certs/http_ca.crt <path_
 ```bash
 docker exec -it elasticsearch bin/elasticsearch-create-enrollment-token -s kibana
 ```
-
-3. You should now be able to access Kibana.
+3. Search for "verification code" in your docker console and enter it into the Kibana window:
+4. You should now be able to access Kibana.
 
 ## Troubleshooting
 
