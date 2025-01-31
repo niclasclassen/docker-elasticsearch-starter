@@ -17,7 +17,7 @@ This guide is designed for the Data Science in Production course to install Elas
 docker compose up
 ```
 
-3. Open your browser and navigate to `https://localhost:9200` to check if Elasticsearch is running.
+3. Open your browser and navigate to `https://localhost:9200` to check if Elasticsearch is running. The default username is "elastic" and the password "mysecurepassword"
 4. Copy the elasticsearch certificate to your local machine:
 
 ```bash
