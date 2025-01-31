@@ -14,7 +14,7 @@ This guide is designed for the Data Science in Production course to install Elas
 2. Run the following command in the root directory of the repository:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 3. Open your browser and navigate to `https://localhost:9200` to check if Elasticsearch is running.
