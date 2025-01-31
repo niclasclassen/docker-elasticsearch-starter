@@ -34,3 +34,20 @@ docker exec -it elasticsearch bin/elasticsearch-create-enrollment-token -s kiban
 ```
 
 3. You should now be able to access Kibana.
+
+## Troubleshooting
+
+You might encounter the following error when using elasticsearch:
+
+```bash
+ApiError: ApiError(429, 'circuit_breaking_exception', '[parent] Data too large, data for [<http_request>] would be [566122900/539.8mb], which is larger than the limit of [510027366/486.3mb], real usage: [369611440/352.4mb], new bytes reserved: [196511460/187.4mb], usages [model_inference=0/0b, inflight_requests=196511460/187.4mb, request=0/0b, fielddata=0/0b, eql_sequence=0/0b]')
+```
+
+This can be fixed by increasing the memory limit for Elasticsearch. To do this, edit line 10 in the `docker-compose.yml` file:
+
+```yaml
+environment:
+  - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+```
+
+Change the values of `-Xms512m` and `-Xmx512m` for example to `-Xms1g` and `-Xmx1g`.
